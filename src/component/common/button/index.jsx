@@ -6,9 +6,11 @@ function Button({
   title = "click here",
   disabled = false,
   onClick = () => {},
+  type = "button",
 }) {
   return (
     <button
+      type={type}
       className={className}
       onClick={onClick}
       disabled={disabled ? disabled : false}>

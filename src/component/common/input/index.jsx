@@ -11,8 +11,9 @@ function Input({
   onChange = () => {},
   classNameContainer,
   labelClassName,
-  minLength=8,
-  maxLength=12,
+  minLength = 8,
+  maxLength = 12,
+  disabled = false,
 }) {
   return (
     <div className={classNameContainer}>
@@ -28,6 +29,7 @@ function Input({
         type={type}
         value={value}
         onChange={onChange}
+        disabled={disabled}
       />
     </div>
   );
@@ -41,8 +43,9 @@ Input.propTypes = {
   type: PropTypes.oneOf("text", "password", "number", "email"),
   value: PropTypes.string,
   onChange: PropTypes.func,
-  minLength:PropTypes.number,
-  maxLength:PropTypes.number
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
+  disabled: PropTypes.bool,
 };
 
 export default Input;
